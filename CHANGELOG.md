@@ -20,3 +20,5 @@ Remove flutter embedding from example app
 Update imports
 ## 0.1.10
 Bug fix
+## 0.1.11
+Bug fix
