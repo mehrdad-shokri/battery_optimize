@@ -9,6 +9,14 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
+import android.os.PowerManager;
+import android.content.Intent;
+import static android.content.Context.POWER_SERVICE;
+import android.content.pm.PackageManager;
+import android.provider.Settings;
+import android.net.Uri;
+
+
 /** BatteryOptimizePlugin */
 public class BatteryOptimizePlugin implements FlutterPlugin, MethodCallHandler {
   /// The MethodChannel that will the communication between Flutter and native Android
@@ -16,6 +24,21 @@ public class BatteryOptimizePlugin implements FlutterPlugin, MethodCallHandler {
   /// This local reference serves to register the plugin with the Flutter Engine and unregister it
   /// when the Flutter Engine is detached from the Activity
   private MethodChannel channel;
+  private PowerManager mPowerManager;
+  private Registrar mRegistrar;
+
+  public static void registerWith(Registrar registrar) {
+
+    if (registrar.activity() == null) {
+      return;
+    }
+    final MethodChannel channel = new MethodChannel(registrar.messenger(), "battery_optimize");
+    channel.setMethodCallHandler(new BatteryOptimizationPlugin(registrar));
+  }
+
+  BatteryOptimizePlugin(Registrar registrar) {
+    mRegistrar = registrar;
+  }
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
