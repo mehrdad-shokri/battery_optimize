@@ -53,6 +53,7 @@ public class BatteryOptimizePlugin implements FlutterPlugin, MethodCallHandler {
   }
 
   boolean isIgnoringBatteryOptimizations() {
+    if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.M) return false;
     String packageName = mRegistrar.activeContext().getPackageName();
     mPowerManager = (PowerManager) (mRegistrar.activeContext().getSystemService(POWER_SERVICE));
 
