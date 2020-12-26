@@ -14,3 +14,5 @@ Override onCreate
 Remove android embeddings
 ## 0.1.7
 Downgrade flutter plugin embeddings
+## 0.1.8
+Remove flutter embedding from example app
