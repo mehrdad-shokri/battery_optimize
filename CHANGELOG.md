@@ -22,3 +22,5 @@ Update imports
 Bug fix
 ## 0.1.11
 Bug fix
+## 0.1.12
+Add required permission
