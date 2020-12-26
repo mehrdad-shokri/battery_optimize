@@ -16,3 +16,5 @@ Remove android embeddings
 Downgrade flutter plugin embeddings
 ## 0.1.8
 Remove flutter embedding from example app
+## 0.1.9
+Update imports
