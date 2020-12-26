@@ -10,3 +10,5 @@ Typo fix
 Remove flutterEngine.getPlugins.add method
 ## 0.1.5
 Override onCreate
+## 0.1.6
+Remove android embeddings
