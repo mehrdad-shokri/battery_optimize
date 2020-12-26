@@ -33,7 +33,7 @@ public class BatteryOptimizePlugin implements FlutterPlugin, MethodCallHandler {
       return;
     }
     final MethodChannel channel = new MethodChannel(registrar.messenger(), "battery_optimize");
-    channel.setMethodCallHandler(new BatteryOptimizationPlugin(registrar));
+    channel.setMethodCallHandler(new BatteryOptimizePlugin(registrar));
   }
 
   BatteryOptimizePlugin(Registrar registrar) {

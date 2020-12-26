@@ -4,3 +4,5 @@ Add isIgnoringBatteryOptimizations, openBatteryOptimizationSettings, stopOptimiz
 return false if android version < Marshmellow
 ## 0.1.2
 Bug fixes
+## 0.1.3
+Typo fix
