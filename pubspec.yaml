@@ -1,6 +1,6 @@
 name: battery_optimize
 description: Check battery optimization status and request for disable
-version: 0.1.3
+version: 0.1.4
 author: Mehrdad Shokri
 homepage: https://github.com/mehrdad-shokri/disable_battery_optimization
 

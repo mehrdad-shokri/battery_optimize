@@ -6,3 +6,5 @@ return false if android version < Marshmellow
 Bug fixes
 ## 0.1.3
 Typo fix
+## 0.1.4
+Remove flutterEngine.getPlugins.add method
