@@ -12,3 +12,5 @@ Remove flutterEngine.getPlugins.add method
 Override onCreate
 ## 0.1.6
 Remove android embeddings
+## 0.1.7
+Downgrade flutter plugin embeddings

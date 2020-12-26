@@ -41,17 +41,6 @@ public class BatteryOptimizePlugin implements FlutterPlugin, MethodCallHandler {
   }
 
   @Override
-  public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
-    channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "battery_optimize");
-    channel.setMethodCallHandler(this);
-  }
-
-  @Override
-  public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
-    channel.setMethodCallHandler(null);
-  }
-
-  @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
     if (call.method.equals("getPlatformVersion")) {
       result.success("Android " + android.os.Build.VERSION.RELEASE);
