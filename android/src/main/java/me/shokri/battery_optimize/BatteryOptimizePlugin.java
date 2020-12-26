@@ -1,7 +1,5 @@
 package me.shokri.battery_optimize;
 
-import androidx.annotation.NonNull;
-
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
@@ -18,10 +16,6 @@ import android.net.Uri;
 
 /** BatteryOptimizePlugin */
 public class BatteryOptimizePlugin implements MethodCallHandler {
-  /// The MethodChannel that will the communication between Flutter and native Android
-  ///
-  /// This local reference serves to register the plugin with the Flutter Engine and unregister it
-  /// when the Flutter Engine is detached from the Activity
   private MethodChannel channel;
   private PowerManager mPowerManager;
   private Registrar mRegistrar;
@@ -64,7 +58,7 @@ public class BatteryOptimizePlugin implements MethodCallHandler {
   }
 
   boolean isIgnoringBatteryOptimizations() {
-    if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.M) return false;
+    if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.M) return true;
     String packageName = mRegistrar.activeContext().getPackageName();
     mPowerManager = (PowerManager) (mRegistrar.activeContext().getSystemService(POWER_SERVICE));
 

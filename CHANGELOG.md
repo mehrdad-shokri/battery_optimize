@@ -18,3 +18,5 @@ Downgrade flutter plugin embeddings
 Remove flutter embedding from example app
 ## 0.1.9
 Update imports
+## 0.1.10
+Bug fix
